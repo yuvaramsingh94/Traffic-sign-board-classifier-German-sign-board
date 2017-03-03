@@ -40,7 +40,11 @@ the code in this repository used CNN to classify german trafic signs . it can cl
   10. create the placeholder names for the image data and labels  
   11. define prediction , accuracy , optimizer , loss 
   12. Run the model on the training data and save the session 
-  13. 
+  13. use testing data to find the accuracy of our model
+  14. to make things interesting , search for trafic singnals online and use thise to check our model
+  15. convert the new images to fit out model by applying resize and grayscape methods 
+  16. run the prediction on these images
+  
   
   
   
