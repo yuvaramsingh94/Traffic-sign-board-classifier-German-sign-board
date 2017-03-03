@@ -37,7 +37,8 @@ the code in this repository used CNN to classify german trafic signs . it can cl
   7. define function conv2d() and pooling() to make the process of creating convolution layers much easier
   8. create weights and biases needed for the convolution layers and fully connected layers. use truncated_normal to generate random values
   9. for making the process of ceating graph easier , define a function Net() to create the graph 
-  ## graph Layeres
+  
+## graph Layeres
       * convolution layer 1 with max pooling (32X32 -> 28X28 -> 24X24) depth(1 -> 6)
       * convolution layer 2 (24X24 -> 12X12) depth(6 -> 16)
       * convolution layer 3 with max pooling (12X12 -> 10X10 -> 5X5) depth (16 -> 32)
