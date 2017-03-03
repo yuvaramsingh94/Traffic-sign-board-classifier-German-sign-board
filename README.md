@@ -44,6 +44,7 @@ the code in this repository used CNN to classify german trafic signs . it can cl
   14. to make things interesting , search for trafic singnals online and use thise to check our model
   15. convert the new images to fit out model by applying resize and grayscape methods 
   16. run the prediction on these images
+  17. visualize the Neural Network's State  to have a better understanding of the COnvolution layer and how they react to your new images
   
   
   
