@@ -23,5 +23,5 @@
   * after installation , open terminal or cmd prompt and run jupyter with this command
       * jupyter notebook
   * this will open your default web browser . 
-  * select the Convolutional_Network_for_MNIST_Data_Classification.ipynb file . 
+  * select the +++++++++++++++++++++++++++++++++++++++++.ipynb file . 
   * go to cell -> Run all
