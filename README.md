@@ -45,5 +45,5 @@ the code in this repository used CNN to classify german trafic signs . it can cl
       * fully connected layer 1
       * fully connected layer 2
       * dropout
-      * output layer
+      * output layer 
   
