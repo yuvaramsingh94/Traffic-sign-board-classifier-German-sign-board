@@ -36,7 +36,17 @@ the code in this repository used CNN to classify german trafic signs . it can cl
   6. create additional training data randomly by applying image transformation technique to the training data
   7. define function conv2d() and pooling() to make the process of creating convolution layers much easier
   8. create weights and biases needed for the convolution layers and fully connected layers. use truncated_normal to generate random values
-  9. for making the process of ceating graph easier , define a function Net() to create the graph 
+  9. for making the process of creating graph easier , define a function Net() to create the graph 
+  10. create the placeholder names for the image data and labels  
+  11. define prediction , accuracy , optimizer , loss 
+  12. Run the model on the training data and save the session 
+  13. 
+  
+  
+  
+  
+  
+  
   
 ## graph Layeres
       * convolution layer 1 with max pooling (32X32 -> 28X28 -> 24X24) depth(1 -> 6)
@@ -47,4 +57,4 @@ the code in this repository used CNN to classify german trafic signs . it can cl
       * fully connected layer 2
       * dropout
       * output layer 
-  
+ 
