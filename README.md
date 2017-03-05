@@ -27,7 +27,7 @@ https://d17h27t6h515a5.cloudfront.net/topher/2017/February/5898cd6f_traffic-sign
   * after installation , open terminal or cmd prompt and run jupyter with this command
       * jupyter notebook
   * this will open your default web browser . 
-  * select the +++++++++++++++++++++++++++++++++++++++++.ipynb file . 
+  * select the Trafic_sign_cassifier_CNN.ipynb file . 
   * go to cell -> Run all
 
 ## Pipeline of program
@@ -49,14 +49,7 @@ https://d17h27t6h515a5.cloudfront.net/topher/2017/February/5898cd6f_traffic-sign
   14. to make things interesting , search for trafic singnals online and use thise to check our model
   15. convert the new images to fit out model by applying resize and grayscape methods 
   16. run the prediction on these images
-  17. visualize the Neural Network's State  to have a better understanding of the COnvolution layer and how they react to your new images
-  
-  
-  
-  
-  
-  
-  
+  17. visualize the Neural Network's State  to have a better understanding of the COnvolution layer and how they react to your new images 
   
 ## graph Layeres
       * convolution layer 1 with max pooling (32X32 -> 28X28 -> 24X24) depth(1 -> 6)
