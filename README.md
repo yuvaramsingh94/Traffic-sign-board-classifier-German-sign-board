@@ -32,6 +32,7 @@ https://d17h27t6h515a5.cloudfront.net/topher/2017/February/5898cd6f_traffic-sign
 
 ## Pipeline of program
   the working of the program can be broken down to following steps
+  ( create a file named model on your working directory)
   1. import the needed libraries
   2. import the signnames.csv file to form a dictionary which maps the sign names to the class number provided in y_labels 
   3. import the train , valid , test data from the pickle file
@@ -66,4 +67,11 @@ https://d17h27t6h515a5.cloudfront.net/topher/2017/February/5898cd6f_traffic-sign
       * fully connected layer 2
       * dropout
       * output layer 
+  
+## shortcoming and area of improvements
+      * efficiency is low on both validation and test dataset
+      * transfer learning can be used to improve the efficeency
+      * features detected on lesond conv layer is not clear 
+      * Bulky code (took me lot of tiem to search and modify my mistakes )
+      
  
