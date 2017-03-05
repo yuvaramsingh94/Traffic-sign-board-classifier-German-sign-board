@@ -3,6 +3,10 @@
 the code in this repository used CNN to classify german trafic signs . it can classify 42 types of trafic signs . this model can also be used to search for trafic sign in a video stream .
 
 
+## To download
+download the german trafic dataset from 
+https://d17h27t6h515a5.cloudfront.net/topher/2017/February/5898cd6f_traffic-signs-data/traffic-signs-data.zip
+
 ## libraries used (python)
   * Tensor flow
   * numpy
