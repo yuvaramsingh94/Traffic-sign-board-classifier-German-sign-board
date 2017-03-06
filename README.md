@@ -39,12 +39,12 @@ The goals / steps of this project are the following:
 [image6]: ./testPic/test2.jpg "Traffic Sign 3"
 [image7]: ./testPic/test3.jpg "Traffic Sign 4"
 [image8]: ./testPic/test4.jpg "Traffic Sign 5"
-
+[image8]: ./example/distribution.jpg "Distribution"
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
 ---
-###Writeup / README
+
 
 ####1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
@@ -54,72 +54,92 @@ You're reading it! and here is a link to my [project code](https://github.com/ud
 
 ####1. Provide a basic summary of the data set and identify where in your code the summary was done. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
-The code for this step is contained in the second code cell of the IPython notebook.  
+The code for this step is contained in the 4 th code cell block  of the jupyter notebook.  
 
-I used the pandas library to calculate summary statistics of the traffic
+I used the numpy library of python to calcualte the shape of train ,test and validation data sets
 signs data set:
 
-* The size of training set is ?
-* The size of test set is ?
-* The shape of a traffic sign image is ?
-* The number of unique classes/labels in the data set is ?
+* The size of training set is 34799
+* The size of test set is 12630
+* The shape of a traffic sign image is (32,32,3)
+* The number of unique classes/labels in the data set is 42
 
 ####2. Include an exploratory visualization of the dataset and identify where the code is in your code file.
 
-The code for this step is contained in the third code cell of the IPython notebook.  
+The code for this step is contained in the 5th  code cell of the IPython notebook.  
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Here is an exploratory visualization of the data set. It is a bar chart showing how the data are distributad and some random pics are visualized with their sign type printed
 
 ![alt text][image1]
+
+![alt text][image9]
 
 ###Design and Test a Model Architecture
 
 ####1. Describe how, and identify where in your code, you preprocessed the image data. What tecniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc.
 
-The code for this step is contained in the fourth code cell of the IPython notebook.
+The code for this step is contained in the 7 th & 9 th  code cell of the IPython notebook.
 
-As a first step, I decided to convert the images to grayscale because ...
+7th code block contains the preprocessing of data and generating additional train datas , 9th code block has the visualization of the normalized images
 
-Here is an example of a traffic sign image before and after grayscaling.
+steps in normalization 
+1. convert BGR image to Grayscale image
+2. apply normalization of formula (x-128)/128
+3. append them to a list and export as a numpy array 
 
 ![alt text][image2]
 
-As a last step, I normalized the image data because ...
+I chose this normalization method because , converting to grayscale reduce the depth from 3 to 1 . normalization formula of (x-128)/128 gives us with a numpy array of value ranging from 0.0 to 2.0 which is mch easier to fit in a training model
+
 
 ####2. Describe how, and identify where in your code, you set up training, validation and testing data. How much data was in each set? Explain what techniques were used to split the data into these sets. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, identify where in your code, and provide example images of the additional data)
 
-The code for splitting the data into training and validation sets is contained in the fifth code cell of the IPython notebook.  
+The code for splitting the data into training and validation sets is contained in the 1sy code cell of the IPython notebook.  
 
-To cross validate my model, I randomly split the training data into a training set and validation set. I did this by ...
+The code for generating additional data is done on the 7 th block along with preprocessing
 
-My final training set had X number of images. My validation set and test set had Y and Z number of images.
+i used open cv , warpAffine to transform randomly selected images from train data
 
-The sixth code cell of the IPython notebook contains the code for augmenting the data set. I decided to generate additional data because ... To add more data to the the data set, I used the following techniques because ... 
+##### steps:
+1. randomly select 10000 images from train data
+2. apply wrapAffine transform to those image with randomly chosen transform value for width and height from (0,5) pixels
 
-Here is an example of an original image and an augmented image:
+My final training set had 44799 number of images. My validation set and test set had 12630 and 4410 number of images.
+
+i augmented the train dataset so that i can increase the distribusion of the training data and reduce the posibility of overfittig by applying transformation 
+
 
 ![alt text][image3]
 
-The difference between the original data set and the augmented data set is the following ... 
+
+
 
 
 ####3. Describe, and identify where in your code, what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
-The code for my final model is located in the seventh cell of the ipython notebook. 
+The code for my final model is located in the 16 th  cell of the ipython notebook. function name (graph(X))
 
 My final model consisted of the following layers:
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32x3 RGB image   							| 
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
+| Convolution 5x5     	| 1x1 stride, valid padding, outputs 28x28x6 	|
 | RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | etc.      									|
-| Fully connected		| etc.        									|
-| Softmax				| etc.        									|
-|						|												|
-|						|												|
+| Max pooling	5x5      	| 1x1 stride,  outputs 24x24x6 				|
+| Convolution 2x2     	| 2x2 stride, valid padding, outputs 12x12x16 	|
+| RELU					|												|
+| Convolution 3x3     	| 1x1 stride, valid padding, outputs 10x10x32 	|
+| RELU					|												|
+| Max pooling	2x2      	| 1x1 stride,  outputs 5x5x32 				|
+| flatten               | 2304 
+| Fully connected		| 2304 ,1024        									|
+| Relu				|         									|
+| Fully connected		| 1024 , 512    									|
+| Relu				|         									|
+|	Dropout				|												|
+|	Output					|			512 , 42									|
+
  
 
 
