@@ -110,7 +110,7 @@ My final training set had 44799 number of images. My validation set and test set
 i augmented the train dataset so that i can increase the distribusion of the training data and reduce the posibility of overfittig by applying transformation 
 
 
-![alt text][trans]
+![alt text][image3]
 
 
 
