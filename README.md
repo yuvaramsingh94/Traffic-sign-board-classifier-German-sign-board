@@ -145,31 +145,32 @@ My final model consisted of the following layers:
 
 ####4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
-The code for training the model is located in the eigth cell of the ipython notebook. 
+The code for training the model is located in the 21th cell of the ipython notebook. 
 
-To train the model, I used an ....
+#### Training process
+1.create placeholders for X , Y , One_hot_y , dropout . create tf variables to hold weights , biases for convolute and fully connected layers 
+2. create logits using the graph function block
+3. define cross_entropy , prediction , accuracy , optimizer , loss functions 
+4. run model for given epochs
 
 ####5. Describe the approach taken for finding a solution. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
-The code for calculating the accuracy of the model is located in the ninth cell of the Ipython notebook.
+The code for calculating the accuracy of the model is located in the 22 nd cell of the Ipython notebook.
+
+i carried out an iterative process for finding the correct parameters and model . firlstly i designed a model and trained it . keeping that as benchmark , i started varing the epochs number , feature numbers for the convolute and fully connected layer , learning rate ,and dropout . 
+
+after a while , i landed on these parametrs which works good for this Neural Network
 
 My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+* training set accuracy of 80.8%
+* validation set accuracy of 65.9%
+* test set accuracy of 66.4%
 
 If an iterative approach was chosen:
-* What was the first architecture that was tried and why was it chosen?
-* What were some problems with the initial architecture?
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to over fitting or under fitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
-* Which parameters were tuned? How were they adjusted and why?
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
+* LeNet was the first Architecture which i choose to classify this images . the problem of this architecture is , due to low training dataset , Lenet yield a veryless accuracy for the  validation and Test dataset
+* i modifiedLenet rchitecture by adding additional convolute layers at he top , i added a dropout layer for the fullyconnected layer and changed the feature map for the convolute layers . i used relu as the activation layer .
+* i started variying the epochs number to land on a optimal value , later i worked with feature numbers for the convolute layers and fullyconnected layers . learining rate was challenging , becouse lower rate made the process of training slow but goes in the rite path where higher rate gives high accuracy in the begining but jumps the optimal value in the end . choosing a value i=right in the middle was challenging . dropout where useful parameter to increase the validation accuracy . 
 
-If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
- 
 
 ###Test a Model on New Images
 
@@ -180,38 +181,27 @@ Here are five German traffic signs that I found on the web:
 ![alt text][image4] ![alt text][image5] ![alt text][image6] 
 ![alt text][image7] ![alt text][image8]
 
-The first image might be difficult to classify because ...
+The4 th  image might be difficult to classify because the picture of the animal in the sign board resembles an arrow like structure . this cause my model to confuse it between animal crossing and double curve
 
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. Identify where in your code predictions were made. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
-The code for making predictions on my final model is located in the tenth cell of the Ipython notebook.
+The code for making predictions on my final model is located in the 24th cell of the Ipython notebook.
 
 Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| Speed limit (20km/h)      		| 'Speed limit (30km/h)   									| 
+| Speed limit (60km/h)     			| Speed limit (60km/h) 										|
+| Child crossing					| Road work									|
+| Wild animals crossing	      		| Wild animals crossing				 				|
+| Roundabout mandatory			| Roundabout mandatory      							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
 
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
+The code for making predictions on my final model is located in the 26th cell of the Ipython notebook.
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
-
-| Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
-
-
-For the second image ... 
+![alt text][softmax]
