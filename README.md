@@ -33,13 +33,14 @@ The goals / steps of this project are the following:
 
 [image1]: ./example/visualization.jpg "Visualization"
 [image2]: ./example/grayscale.jpg "Grayscaling"
-[image3]: ./example/random_noise.jpg "Random Noise"
+[image3]: ./example/trans.jpg "trans"
 [image4]: ./testPic/test.jpg "Traffic Sign 1"
 [image5]: ./testPic/test1.jpg "Traffic Sign 2"
 [image6]: ./testPic/test2.jpg "Traffic Sign 3"
 [image7]: ./testPic/test3.jpg "Traffic Sign 4"
 [image8]: ./testPic/test4.jpg "Traffic Sign 5"
 [image8]: ./example/distribution.jpg "Distribution"
+[image9]: ./example/new_image_pred.jpg "pred"
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
@@ -109,7 +110,7 @@ My final training set had 44799 number of images. My validation set and test set
 i augmented the train dataset so that i can increase the distribusion of the training data and reduce the posibility of overfittig by applying transformation 
 
 
-![alt text][image3]
+![alt text][trans]
 
 
 
@@ -204,4 +205,4 @@ The model was able to correctly guess 3 of the 5 traffic signs, which gives an a
 
 The code for making predictions on my final model is located in the 26th cell of the Ipython notebook.
 
-![alt text][softmax]
+![alt text][image9]
