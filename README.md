@@ -1,24 +1,36 @@
 #**Traffic Sign Recognition** 
 
-##Writeup Template
+##INTRODUCTION
+This is a Convolution Neural Network model used to classify images . in this repository , i had used this model to classify German Traffic sign boards into 42 classes . this model takes 32X32X1 image as input and predicts the sign board type using  CNN and fully connected Neural Network 
 
-###You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
 
 ---
 
 **Build a Traffic Sign Recognition Project**
 
 The goals / steps of this project are the following:
-* Load the data set (see below for links to the project data set)
-* Explore, summarize and visualize the data set
-* Design, train and test a model architecture
-* Use the model to make predictions on new images
-* Analyze the softmax probabilities of the new images
-* Summarize the results with a written report
+  ( create a file named model on your working directory)
+  1. import the needed libraries (Tensorflow , matplotlib ,sklearn ,random ,opencv ,numpy ,pickle)
+  2. import the signnames.csv file to form a dictionary which maps the sign names to the class number provided in y_labels 
+  3. import the train , valid , test data from the pickle file
+  4. summerize and visualize the input data 
+  5. convert BGR image to Gray scale
+  6. create additional training data randomly by applying image transformation technique to the training data
+  7. define function conv2d() and pooling() to make the process of creating convolution layers much easier
+  8. create weights and biases needed for the convolution layers and fully connected layers. use truncated_normal to generate random values
+  9. for making the process of creating graph easier , define a function Net() to create the graph 
+  10. create the placeholder names for the image data and labels  
+  11. define prediction , accuracy , optimizer , loss 
+  12. Run the model on the training data and save the session 
+  13. use testing data to find the accuracy of our model
+  14. to make things interesting , search for trafic singnals online and use thise to check our model
+  15. convert the new images to fit out model by applying resize and grayscape methods 
+  16. run the prediction on these images
+  17. visualize the Neural Network's State  to have a better understanding of the COnvolution layer and how they react to your new images 
 
 
 [//]: # (Image References)
-
+[visualization]: ./testPic/test.jpg
 [image1]: ./examples/visualization.jpg "Visualization"
 [image2]: ./examples/grayscale.jpg "Grayscaling"
 [image3]: ./examples/random_noise.jpg "Random Noise"
