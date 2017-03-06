@@ -30,10 +30,10 @@ The goals / steps of this project are the following:
 
 
 [//]: # (Image References)
-[visualization]: ./testPic/test.jpg
-[image1]: ./examples/visualization.jpg "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
+
+[image1]: ./example/visualization.jpg "Visualization"
+[image2]: ./example/grayscale.jpg "Grayscaling"
+[image3]: ./example/random_noise.jpg "Random Noise"
 [image4]: ./testPic/test.jpg "Traffic Sign 1"
 [image5]: ./testPic/test1.jpg "Traffic Sign 2"
 [image6]: ./testPic/test2.jpg "Traffic Sign 3"
