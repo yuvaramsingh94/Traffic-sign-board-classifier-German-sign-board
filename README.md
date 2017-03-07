@@ -125,13 +125,13 @@ My final model consisted of the following layers:
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32x3 RGB image   							| 
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 28x28x6 	|
-| Max pooling	3x3      	| 1x1 stride, same padding,outputs 24x24x6 				|
-| Convolution 5x5     	| 3x3 stride, valid padding, outputs 12x12x16 	|
-| Max pooling	3x3      	| 1x1 stride, valid padding,outputs 24x24x6 				|
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 10x10x32 	|
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 10x10x32 	|
-| Max pooling	3x3      	| 1x1 stride,  outputs 5x5x32 				|
+| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x16 	|
+| Max pooling	3x3      	| 1x1 stride, same padding,outputs 32x32x16 				|
+| Convolution 5x5     	| 3x3 stride, valid padding, outputs 10x10x64 	|
+| Max pooling	3x3      	| 1x1 stride, valid padding,outputs 8x8x64 				|
+| Convolution 3x3     	| 1x1 stride, same padding, outputs 8x8x128 	|
+| Convolution 3x3     	| 1x1 stride, same padding, outputs 8x8x64 	|
+| Max pooling	3x3      	| 1x1 stride,  outputs 6x6x64				|
 | flatten               | 2304 
 | Fully connected		| 2304 ,1024        									|
 | Dropout				|         									|
