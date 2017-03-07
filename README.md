@@ -125,21 +125,19 @@ My final model consisted of the following layers:
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32x3 RGB image   							| 
-| Convolution 5x5     	| 1x1 stride, valid padding, outputs 28x28x6 	|
-| RELU					|												|
-| Max pooling	5x5      	| 1x1 stride,  outputs 24x24x6 				|
-| Convolution 2x2     	| 2x2 stride, valid padding, outputs 12x12x16 	|
-| RELU					|												|
-| Convolution 3x3     	| 1x1 stride, valid padding, outputs 10x10x32 	|
-| RELU					|												|
-| Max pooling	2x2      	| 1x1 stride,  outputs 5x5x32 				|
+| Convolution 3x3     	| 1x1 stride, same padding, outputs 28x28x6 	|
+| Max pooling	3x3      	| 1x1 stride, same padding,outputs 24x24x6 				|
+| Convolution 5x5     	| 3x3 stride, valid padding, outputs 12x12x16 	|
+| Max pooling	3x3      	| 1x1 stride, valid padding,outputs 24x24x6 				|
+| Convolution 3x3     	| 1x1 stride, same padding, outputs 10x10x32 	|
+| Convolution 3x3     	| 1x1 stride, same padding, outputs 10x10x32 	|
+| Max pooling	3x3      	| 1x1 stride,  outputs 5x5x32 				|
 | flatten               | 2304 
 | Fully connected		| 2304 ,1024        									|
-| Relu				|         									|
-| Fully connected		| 1024 , 512    									|
-| Relu				|         									|
+| Dropout				|         									|
+| Fully connected		| 1024 , 1024   									|
 |	Dropout				|												|
-|	Output					|			512 , 42									|
+|	Output					|			1024 , 42									|
 
  
 
