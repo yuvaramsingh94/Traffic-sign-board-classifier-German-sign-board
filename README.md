@@ -126,11 +126,15 @@ My final model consisted of the following layers:
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32x3 RGB image   							| 
 | Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x16 	|
+| Relu        		|   							| 
 | Max pooling	3x3      	| 1x1 stride, same padding,outputs 32x32x16 				|
 | Convolution 5x5     	| 3x3 stride, valid padding, outputs 10x10x64 	|
+| Relu        		|   							|
 | Max pooling	3x3      	| 1x1 stride, valid padding,outputs 8x8x64 				|
 | Convolution 3x3     	| 1x1 stride, same padding, outputs 8x8x128 	|
+| Relu        		|   							|
 | Convolution 3x3     	| 1x1 stride, same padding, outputs 8x8x64 	|
+| Relu        		|   							|
 | Max pooling	3x3      	| 1x1 stride,  outputs 6x6x64				|
 | flatten               | 2304 
 | Fully connected		| 2304 ,1024        									|
@@ -192,9 +196,9 @@ Here are the results of the prediction:
 |:---------------------:|:---------------------------------------------:| 
 | Speed limit (20km/h)      		| 'Speed limit (30km/h)   									| 
 | Speed limit (60km/h)     			| Speed limit (60km/h) 										|
-| Child crossing					| Road work									|
+| Child crossing					| Child crossing								|
 | Wild animals crossing	      		| Wild animals crossing				 				|
-| Roundabout mandatory			| Roundabout mandatory      							|
+| Turn right			| No entry      							|
 
 
 The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
