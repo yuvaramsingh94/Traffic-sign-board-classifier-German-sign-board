@@ -33,7 +33,7 @@ The goals / steps of this project are the following:
 
 [image1]: ./example/visualization.jpg "Visualization"
 [image2]: ./example/grayscale.jpg "Grayscaling"
-[image3]: ./example/trans.jpg "trans"
+
 [image4]: ./testPic/a.jpg "Traffic Sign 1"
 [image5]: ./testPic/b.jpg "Traffic Sign 2"
 [image6]: ./testPic/c.jpg "Traffic Sign 3"
@@ -110,7 +110,7 @@ My final training set had 44799 number of images. My validation set and test set
 i augmented the train dataset so that i can increase the distribusion of the training data and reduce the posibility of overfittig by applying transformation 
 
 
-![alt text][image3]
+
 
 
 
