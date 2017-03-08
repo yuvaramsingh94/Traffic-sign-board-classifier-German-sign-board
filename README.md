@@ -13,20 +13,20 @@ The goals / steps of this project are the following:
   1. import the needed libraries (Tensorflow , matplotlib ,sklearn ,random ,opencv ,numpy ,pickle)
   2. import the signnames.csv file to form a dictionary which maps the sign names to the class number provided in y_labels 
   3. import the train , valid , test data from the pickle file
-  4. summerize and visualize the input data 
+  4. summarize and visualize the input data 
   5. convert BGR image to Gray scale
   6. create additional training data randomly by applying image transformation technique to the training data
   7. define function conv2d() and pooling() to make the process of creating convolution layers much easier
-  8. create weights and biases needed for the convolution layers and fully connected layers. use truncated_normal to generate random values
-  9. for making the process of creating graph easier , define a function Net() to create the graph 
+  8. create weights and biases needed for the convolutional layers and fully connected layers. use truncated_normal to generate random values
+  9. for making the process of creating graph easier , define a function graph1() to create the graph 
   10. create the placeholder names for the image data and labels  
   11. define prediction , accuracy , optimizer , loss 
   12. Run the model on the training data and save the session 
   13. use testing data to find the accuracy of our model
-  14. to make things interesting , search for trafic singnals online and use thise to check our model
-  15. convert the new images to fit out model by applying resize and grayscape methods 
+  14. to make things interesting , search for traffic signals online and use these to check our model
+  15. convert the new images to fit our model by applying resize  
   16. run the prediction on these images
-  17. visualize the Neural Network's State  to have a better understanding of the COnvolution layer and how they react to your new images 
+  17. visualize the Neural Network's State  to have a better understanding of the Convolution layer and how they react to your new images 
 
 
 [//]: # (Image References)
@@ -57,7 +57,7 @@ You're reading it! and here is a link to my [project code](https://github.com/ud
 
 The code for this step is contained in the 4 th code cell block  of the jupyter notebook.  
 
-I used the numpy library of python to calcualte the shape of train ,test and validation data sets
+I used the numpy library of python to calculate the shape of train ,test and validation data sets
 signs data set:
 
 * The size of training set is 34799
@@ -69,7 +69,7 @@ signs data set:
 
 The code for this step is contained in the 5th  code cell of the IPython notebook.  
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data are distributad and some random pics are visualized with their sign type printed
+Here is an exploratory visualization of the data set. It is a bar chart showing how the data are distributed and some random pics are visualized with their sign type printed
 
 ![alt text][image8]
 
@@ -107,7 +107,7 @@ i used open cv , warpAffine to transform randomly selected images from train dat
 
 My final training set had 44799 number of images. My validation set and test set had 12630 and 4410 number of images.
 
-i augmented the train dataset so that i can increase the distribusion of the training data and reduce the posibility of overfittig by applying transformation 
+i augmented the train dataset so that i can increase the distribution of the training data and reduce the possibility of overfitting by applying transformation 
 
 
 
@@ -160,9 +160,9 @@ The code for training the model is located in the 21th cell of the ipython noteb
 
 The code for calculating the accuracy of the model is located in the 22 nd cell of the Ipython notebook.
 
-i carried out an iterative process for finding the correct parameters and model . firlstly i designed a model and trained it . keeping that as benchmark , i started varing the epochs number , feature numbers for the convolute and fully connected layer , learning rate ,and dropout . 
+i carried out an iterative process for finding the correct parameters and model . firstly i designed a model and trained it . keeping that as benchmark , i started varying the epochs number , feature numbers for the convolute and fully connected layer , learning rate ,and dropout . 
 
-after a while , i landed on these parametrs which works good for this Neural Network
+after a while , i landed on these parameters which works good for this Neural Network
 
 My final model results were:
 * training set accuracy of 97.7%
@@ -170,9 +170,9 @@ My final model results were:
 * test set accuracy of 92.3%
 
 If an iterative approach was chosen:
-* LeNet was the first Architecture which i choose to classify this images . the problem of this architecture is , due to low training dataset , Lenet yield a veryless accuracy for the  validation and Test dataset
-* i modifiedLenet rchitecture by adding additional convolute layers at he top , i added a dropout layer for the fullyconnected layer and changed the feature map for the convolute layers . i used relu as the activation layer .
-* i started variying the epochs number to land on a optimal value , later i worked with feature numbers for the convolute layers and fullyconnected layers . learining rate was challenging , becouse lower rate made the process of training slow but goes in the rite path where higher rate gives high accuracy in the begining but jumps the optimal value in the end . choosing a value i=right in the middle was challenging . dropout where useful parameter to increase the validation accuracy . 
+* LeNet was the first Architecture which i choose to classify this images . the problem of this architecture is , due to low training dataset , Lenet yield a very less accuracy for the  validation and Test dataset
+* i modified Lenet architecture by adding additional convolute layers at he top , i added a dropout layer for the fullyconnected layer and changed the feature map for the convolute layers . i used relu as the activation layer .
+* i started varying the epochs number to land on a optimal value , later i worked with feature numbers for the convolute layers and fullyconnected layers . learining rate was challenging , because lower rate made the process of training slow but goes in the rite path where higher rate gives high accuracy in the beginning but jumps the optimal value in the end . choosing a value i = right in the middle was challenging . dropout where useful parameter to increase the validation accuracy . 
 
 
 ###Test a Model on New Images
