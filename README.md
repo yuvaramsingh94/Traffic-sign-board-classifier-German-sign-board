@@ -71,9 +71,9 @@ The code for this step is contained in the 5th  code cell of the IPython noteboo
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data are distributad and some random pics are visualized with their sign type printed
 
-![alt text][image1]
+![alt text][image8]
 
-![alt text][image9]
+
 
 ###Design and Test a Model Architecture
 
@@ -165,9 +165,9 @@ i carried out an iterative process for finding the correct parameters and model 
 after a while , i landed on these parametrs which works good for this Neural Network
 
 My final model results were:
-* training set accuracy of 80.8%
-* validation set accuracy of 65.9%
-* test set accuracy of 66.4%
+* training set accuracy of 97.7%
+* validation set accuracy of 94.0%
+* test set accuracy of 92.3%
 
 If an iterative approach was chosen:
 * LeNet was the first Architecture which i choose to classify this images . the problem of this architecture is , due to low training dataset , Lenet yield a veryless accuracy for the  validation and Test dataset
@@ -184,7 +184,7 @@ Here are five German traffic signs that I found on the web:
 ![alt text][image4] ![alt text][image5] ![alt text][image6] 
 ![alt text][image7] ![alt text][image8]
 
-The4 th  image might be difficult to classify because the picture of the animal in the sign board resembles an arrow like structure . this cause my model to confuse it between animal crossing and double curve
+The 5 th  image might be difficult to classify because the picture of the right turn is surrounded by blue color which might get confused with red of no entry sign
 
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. Identify where in your code predictions were made. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
@@ -200,11 +200,11 @@ Here are the results of the prediction:
 | Wild animals crossing	      		| Wild animals crossing				 				|
 | Turn right			| No entry      							|
 
-
+![alt text][image9]
 The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
 
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
 The code for making predictions on my final model is located in the 26th cell of the Ipython notebook.
 
-![alt text][image9]
+![alt text][image1]
