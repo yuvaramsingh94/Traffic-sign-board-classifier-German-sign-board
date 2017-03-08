@@ -1,7 +1,7 @@
 #**Traffic Sign Recognition** 
 
 ##INTRODUCTION
-This is a Convolution Neural Network model used to classify images . in this repository , i had used this model to classify German Traffic sign boards into 42 classes . this model takes 32X32X1 image as input and predicts the sign board type using  CNN and fully connected Neural Network 
+This is a Convolution Neural Network model used to classify images . in this repository , i had used this model to classify German Traffic sign boards into 42 classes . this model takes 32X32X3 image as input and predicts the sign board type using  CNN and fully connected Neural Network 
 
 
 ---
