@@ -34,11 +34,11 @@ The goals / steps of this project are the following:
 [image1]: ./example/visualization.jpg "Visualization"
 [image2]: ./example/grayscale.jpg "Grayscaling"
 [image3]: ./example/trans.jpg "trans"
-[image4]: ./testPic/test.jpg "Traffic Sign 1"
-[image5]: ./testPic/test1.jpg "Traffic Sign 2"
-[image6]: ./testPic/test2.jpg "Traffic Sign 3"
-[image7]: ./testPic/test3.jpg "Traffic Sign 4"
-[image8]: ./testPic/test4.jpg "Traffic Sign 5"
+[image4]: ./testPic/a.jpg "Traffic Sign 1"
+[image5]: ./testPic/b.jpg "Traffic Sign 2"
+[image6]: ./testPic/c.jpg "Traffic Sign 3"
+[image7]: ./testPic/d.jpg "Traffic Sign 4"
+[image8]: ./testPic/e.jpg "Traffic Sign 5"
 [image8]: ./example/distribution.jpg "Distribution"
 [image9]: ./example/new_image_pred.jpg "pred"
 ## Rubric Points
@@ -201,7 +201,7 @@ Here are the results of the prediction:
 | Turn right			| No entry      							|
 
 
-The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
 
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
