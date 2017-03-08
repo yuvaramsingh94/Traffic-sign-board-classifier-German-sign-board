@@ -83,14 +83,14 @@ The code for this step is contained in the 7 th & 9 th  code cell of the IPython
 
 7th code block contains the preprocessing of data and generating additional train datas , 9th code block has the visualization of the normalized images
 
-steps in normalization 
-1. convert BGR image to Grayscale image
-2. apply normalization of formula (x-128)/128
-3. append them to a list and export as a numpy array 
+i used open cv , warpAffine to transform randomly selected images from train data
+
+Note : i have not used any normalization on my model , because i found normalization not helping my model's prediction rate . feel free to apply normalization 
+basic normalization of image data looks like
+(x-128)/128
 
 ![alt text][image2]
 
-I chose this normalization method because , converting to grayscale reduce the depth from 3 to 1 . normalization formula of (x-128)/128 gives us with a numpy array of value ranging from 0.0 to 2.0 which is mch easier to fit in a training model
 
 
 ####2. Describe how, and identify where in your code, you set up training, validation and testing data. How much data was in each set? Explain what techniques were used to split the data into these sets. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, identify where in your code, and provide example images of the additional data)
